@@ -1,4 +1,5 @@
-#![alt text](cos_bw_sm.jpg "") CosmoForms [V1.0.0-beta]
+![cos](/cos_bw_sm.jpg?raw=true "")
+# CosmoForms [V1.0.0-beta]
 
 ### About
 
