@@ -40,9 +40,27 @@ CosmoForms intends to keep things simple. **Json in, Json out**. Whatever Json t
 CosmoForms requires 3 external libraries to work. 
 The following list are those libraries along with the version which was used for testing. 
 
-- [JsonPath] (http://goessner.net/articles/JsonPath/) Main Page
-    - [Downloads] (https://code.google.com/archive/p/jsonpath/downloads) (tested: 0.8.0)
-- Bootstrap (tested: 3.3.7)
-- JQuery (tested: 3.2.1)
+- [JsonPath](http://goessner.net/articles/JsonPath/) Main Page[Downloads](https://code.google.com/archive/p/jsonpath/downloads)(tested: 0.8.0)
+- [Bootstrap](http://getbootstrap.com/)(tested: 3.3.7)
+- [JQuery](https://jquery.com/) (tested: 3.2.1)
 
 
+### Usage 
+
+
+### Sample Template
+
+
+### Handling Form Submission Success
+
+
+### Handling Form Submission Errors
+
+
+### Handling Form Cancel
+
+
+### Limitations
+
+
+### Upcoming Changes
