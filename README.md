@@ -1,4 +1,4 @@
-#![alt text](https://postimg.org/image/gnmmyl9t5/ "") CosmoForms [V1.0.0-beta]
+#![alt text](cos_bw_sm.jpg "") CosmoForms [V1.0.0-beta]
 
 ### About
 
@@ -12,10 +12,10 @@ You can get up and running with CosmoForms fairly easy, and usually, in less tha
 
 CosmoForms solves a common problem for many non-UI developers. 
 At the same time, it allows for easy modification of schemaless data.
-The process of getting form data from browswer to database usually involves a few steps.
+The process of getting form data from browser to database usually involves a few steps.
 At the very minimum, it requires that the data be captured, converted to a specific format, then stored in a database. 
 A lot of repetitive code usually arises out of these simple steps and there are plenty of frameworks that help deal with
-this already. However, these frameworks are usually implemented as part of a more complex framwork or, in a specific technology for both backend and frontend,
+this already. However, these frameworks are usually implemented as part of a more complex framework or, in a specific technology for both backend and frontend,
  thus tying both disciplines together to some degree.
  
 CosmoForms intends to keep things simple. **Json in, Json out**. Whatever Json the framework receives, it outputs along with modifications. 
