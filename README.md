@@ -291,9 +291,17 @@ In our demo, this function will take the user back to a listing page.
 
 ### Limitations
 
+Like all things in life, CosmoForms has limitations:
+
+- Does not work with root level Json Arrays. That's right. If data_url points to a Json Array, then it will not work. Try it so you can see the pretty error message.
+- Input Json should be as flat as possible, meaning not to many nested objects. Currently, CosmoForms only supports around 2 to 3 nested objects.
+- CosmoForms only works with Json data. Sorry XML.
 
 
 ### Upcoming Changes
 
+- Implement client-side validation callbacks
+- Ability to remove/delete lists and objects
+- Ability to rename fields
 
 
