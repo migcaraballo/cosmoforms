@@ -1,0 +1,26 @@
+[
+  {
+    "name" : "milo cat",
+    "age" : 8,
+    "join_date" : 1460635535,
+    "gender" : "m",
+    "over21" : true,
+    "last_login" : 1490935725,
+    "pets" :[
+      {
+        "name" : "cosmo",
+        "type" : "dog"
+      },
+      {
+        "name" : "dory",
+        "type" : "fish"
+      }
+    ],
+    "favorite_foods" : [
+      "purina",
+      "deli meats",
+      "blue buffalo biscuits",
+      "water"
+    ]
+  }
+]

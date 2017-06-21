@@ -1,0 +1,114 @@
+{
+  "_id":{
+    "form_field": "id",
+    "label": "Mongo Key"
+  },
+  "id_field": {
+    "form_field": "id",
+    "label": "Account #"
+  },
+  "active": {
+    "form_field": "select",
+    "label": "Active-ish"
+  },
+  "treats": {
+    "form_field": "select",
+    "label": "Allowed Treats"
+  },
+  "favorite_foods":{
+    "label": "Fave Foods"
+  },
+  "gender": {
+    "form_field": "radio",
+    "label": "Sex",
+    "options": [
+      {
+        "label": "Male",
+        "value": "m"
+      },
+      {
+        "label": "Female",
+        "value": "f"
+      }
+    ]
+  },
+  "exercise_schedule": {
+    "label": "Workouts",
+    "day": {
+      "label": "Day Of Week"
+    },
+    "start_time": {
+      "label": "Start"
+    },
+    "end_time": {
+      "label" : "End"
+    },
+    "active_day": {
+      "label" : "Is Active?"
+    }
+  },
+  "retired" : {
+    "form_field": "select",
+    "options" : [
+      {
+        "label": "Heck Yes!!!",
+        "value": true
+      },
+      {
+        "label": "Still Working",
+        "value": false
+      }
+    ]
+  },
+  "allergies": {
+    "form_field": "multi-select",
+    "options" : [
+      {
+        "label": "Peanuts",
+        "value": "peanuts"
+      },
+      {
+        "label": "Onions",
+        "value": "onions"
+      },
+      {
+        "label": "Chocolate",
+        "value": "chocolate"
+      },
+      {
+        "label": "Milk",
+        "value": "milk"
+      },
+      {
+        "label": "Driving",
+        "value": "driving"
+      }
+    ]
+  },
+  "moar_allergies": {
+    "label": "Allergies #2",
+    "form_field": "checkbox",
+    "options" : [
+      {
+        "label": "Peanuts",
+        "value": "peanuts"
+      },
+      {
+        "label": "Onions",
+        "value": "onions"
+      },
+      {
+        "label": "Chocolate",
+        "value": "chocolate"
+      },
+      {
+        "label": "Milk",
+        "value": "milk"
+      },
+      {
+        "label": "Driving",
+        "value": "driving"
+      }
+    ]
+  }
+}

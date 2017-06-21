@@ -1,0 +1,21 @@
+{
+  "nombre" : "",
+  "age" : 0,
+  "active" : true,
+  "favorite_foods" : [],
+  "exercise_schedule" : [
+    {
+      "day" : "",
+      "start_time" : "",
+      "end_time" : "",
+      "active_day": true
+    }
+  ],
+  "address" : {
+    "street" : "",
+    "city" : "",
+    "state" : "",
+    "zip" : 0
+  },
+  "textarea_sample" : ""
+}

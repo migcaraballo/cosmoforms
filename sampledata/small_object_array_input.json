@@ -1,0 +1,16 @@
+{
+  "exercise_schedule" : [
+    {
+      "day" : "monday",
+      "start_time" : "6:00",
+      "end_time" : "7:30",
+      "active_day": true
+    },
+    {
+      "day" : "thursday",
+      "start_time" : "16:00",
+      "end_time" : "18:00",
+      "active_day": false
+    }
+  ]
+}

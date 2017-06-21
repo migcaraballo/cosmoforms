@@ -1,0 +1,45 @@
+{
+  "_id": "58dc95e2aa3d0f0b67230878",
+  "index": 0,
+  "guid": "16724c86-024b-412c-8d2b-c960a1abcc47",
+  "isActive": true,
+  "balance": "$1,039.65",
+  "picture": "http://placehold.it/32x32",
+  "age": 34,
+  "eyeColor": "blue",
+  "name": "Mclean Carson",
+  "gender": "m",
+  "company": "ZOLAREX",
+  "email": "mcleancarson@zolarex.com",
+  "phone": "+1 (990) 555-3788",
+  "address": "654 Anthony Street, Joes, Idaho, 9443",
+  "about": "Ad ex aliqua consequat voluptate ex. Ex dolore dolore ad do tempor nisi deserunt. Minim ullamco commodo irure commodo anim deserunt. Non labore ipsum enim commodo ex anim irure dolore cillum ut irure. Pariatur nostrud dolor Lorem nostrud duis qui labore adipisicing incididunt cupidatat excepteur labore nostrud amet. Amet proident nostrud magna labore ad sunt irure eu duis.\r\n",
+  "registered": "2017-03-03T06:13:13 +08:00",
+  "latitude": 83.942838,
+  "longitude": 168.305395,
+  "tags": [
+    "fugiat",
+    "fugiat",
+    "incididunt",
+    "id",
+    "adipisicing",
+    "reprehenderit",
+    "eu"
+  ],
+  "friends": [
+    {
+      "id": 0,
+      "name": "Peck Hurst"
+    },
+    {
+      "id": 1,
+      "name": "Glover Hughes"
+    },
+    {
+      "id": 2,
+      "name": "Cain Lewis"
+    }
+  ],
+  "greeting": "Hello, Mclean Carson! You have 8 unread messages.",
+  "favoriteFruit": "strawberry"
+}
