@@ -54,7 +54,7 @@ The following list are those libraries along with the version which was used for
 
 ##### Configuration
 
-This assumes you have downloaded and installed JavaScript files in folder called "js" accessible to your page.
+This assumes you have downloaded and installed JavaScript files in a folder called "js" accessible to your page.
 ```
 <script src="js/cosmoforms-1.0.0-beta.js"></script>
 ```
@@ -62,7 +62,7 @@ This assumes you have downloaded and installed JavaScript files in folder called
 ##### After Body Tag:
 ```
 <!-- cosmoForms -->
-<script src="js/cosmoforms-1.0.0-beta.js"></script>
+<script src="js/cosmoforms-1.0.0-beta.min.js"></script>
 
 <script>
     var thisPage = "test_cosmoforms.html?cosmodebug=true";
@@ -122,8 +122,7 @@ cosmoForm({
         <title>Cosmo Forms</title>
 
         <!-- Bootstrap CSS -->
-        <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
-        <link href="css/united-bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -154,7 +153,7 @@ cosmoForm({
     <script src="js/jsonpath-0.8.0.js"></script>
 
     <!-- cosmoForms -->
-    <script src="js/cosmoforms-1.0.0-beta.js"></script>
+    <script src="js/cosmoforms-1.0.0-beta.min.js"></script>
 
     <script>
         var thisPage = "test_cosmoforms.html?cosmodebug=true";
