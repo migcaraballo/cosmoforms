@@ -1,0 +1,52 @@
+{
+  "nombre" : "cosmo",
+  "age" : 7,
+  "float" : 0.125,
+  "double" : 23.32,
+  "long" : 13214564647987978,
+  "gender" : "m",
+  "active" : false,
+  "active_two" : false,
+  "type" : "dog",
+  "favorite_foods" : [
+    "purina one",
+    "water",
+    "blue buffalo biscuits",
+    "deli meats",
+    "wood"
+  ],
+  "exercise_schedule" : [
+    {
+      "day" : "monday",
+      "start_time" : "6:00",
+      "end_time" : "7:30",
+      "active_day": true
+    },
+    {
+      "day" : "tuesday",
+      "start_time" : "16:00",
+      "end_time" : "18:00",
+      "active_day": true
+    },
+    {
+      "day" : "thursday",
+      "start_time" : "16:00",
+      "end_time" : "18:00",
+      "active_day": false
+    }
+  ],
+  "treats" : false,
+  "address" : {
+    "street" : "123 main st",
+    "city" : "los angeles",
+    "state" : "wa",
+    "zip" : 90023
+  },
+  "about": "Ad ex aliqua consequat voluptate ex. Ex dolore dolore ad do tempor nisi deserunt. Minim ullamco commodo irure commodo anim deserunt. Non labore ipsum enim commodo ex anim irure dolore cillum ut irure. Pariatur nostrud dolor Lorem nostrud duis qui labore adipisicing incididunt cupidatat excepteur labore nostrud amet. Amet proident nostrud magna labore ad sunt irure eu duis.\r\n",
+  "retired": false,
+  "allergies" : [
+    "peanuts",
+    "chocolate",
+    "milk"
+  ]
+}

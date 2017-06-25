@@ -80,7 +80,6 @@ function processReturnedJson(jsObj){
         });
 
         var saveBtnHtml = genButton("Save", "button", "btn btn-primary", "margin-right: 10px", "save");
-        // $("#cosmo-form").on("click", "#save", function(e){
         $("#"+ cosmoProps.target_form_id).on("click", "#save", function(e){
             e.preventDefault();
 
@@ -96,7 +95,6 @@ function processReturnedJson(jsObj){
         });
 
         var cancelBtn = genButton("Cancel", "button", "btn btn-danger", "margin-left: 10px", "cancelBtn");
-        // $("#cosmo-form").on("click", "#cancelBtn", function(e){
         $("#"+ cosmoProps.target_form_id).on("click", "#cancelBtn", function(e){
             cosmoProps.cancel_action();
         });
@@ -106,7 +104,6 @@ function processReturnedJson(jsObj){
 
         outputHtml += genButtonFormGroup2( [saveBtnHtml, resetBtnHtml, cancelBtn, addPropBtnHtml], "root-btn-group");
 
-        // $("#cosmo-form").on("click", "#addprop", function(e){
         $("#"+ cosmoProps.target_form_id).on("click", "#addprop", function(e){
             openDialog("Add Field To Root", addFieldDialog("root", "root-btn-group"), "");
         });
