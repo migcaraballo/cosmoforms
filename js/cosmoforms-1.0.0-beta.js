@@ -49,7 +49,6 @@ function cosmoForm(props){
 function processReturnedJson(jsObj){
     var outputHtml = "";
     var default_props = cosmoProps.default_props;
-
     origData = jsObj;
 
     // check if data is not array
@@ -67,7 +66,6 @@ function processReturnedJson(jsObj){
 
                 var innerHtml = genInputField(root_key, root_val, default_props, rootType, schemaName, jspath);
                 outputHtml += genFormGroup2(innerHtml, getLabel(root_key, jspath));
-
             }
             else if(rootType == "array"){
                 var tmpHtml = handleArrayFields(root_key, root_val, root_key, schemaName, jsObj, default_props);
@@ -286,8 +284,8 @@ function genHandleObject2(objVal, parentKey, child_key){
 function genInputField(name, value, props, type, schemaName, jspath){
     // 1 - determine if there is any matching override schema field
     if(overrideSchema != null || overrideSchema != undefined){
-        npath = normalizePath(overrideSchema, jspath);
-        formField = getPathValue(overrideSchema, npath +".form_field");
+        var npath = normalizePath(overrideSchema, jspath);
+        var formField = getPathValue2(overrideSchema, npath +".form_field");
 
         if(formField != false){
             if(formField == "id"){
@@ -1193,6 +1191,14 @@ function isMapEmpty(obj){
 
 function getPathValue(schema, path, replace){
     return jsonPath(schema, "$."+ path);
+}
+
+function getPathValue2(schema, path){
+    var extVal = jsonPath(schema, "$."+ path);
+    if(tp(extVal) == "array" && extVal.length == 1){
+        return extVal[0];
+    }
+    return extVal;
 }
 
 function normalizePath(schema, path){
