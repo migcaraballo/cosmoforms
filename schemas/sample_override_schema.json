@@ -5,7 +5,8 @@
   },
   "id_field": {
     "form_field": "id",
-    "label": "Account #"
+    "label": "Account #",
+    "display": false
   },
   "active": {
     "form_field": "select",

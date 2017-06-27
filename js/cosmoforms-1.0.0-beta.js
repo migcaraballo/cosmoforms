@@ -52,9 +52,9 @@ function processReturnedJson(jsObj){
     origData = jsObj;
 
     // check if data is not array
-    if(tp(jsObj) != "array"){
+    if(tp(origData) != "array"){
 
-        $.each(jsObj, function(root_key,root_val){
+        $.each(origData, function(root_key,root_val){
             //log("[rk: "+ root_key +"] (rv = "+ root_val +")");
             var rootType = tp(root_val);
             setRef(root_key, root_val);
@@ -64,8 +64,10 @@ function processReturnedJson(jsObj){
                 var jspath = root_key;
                 pathout(root_key, jsObj);
 
-                var innerHtml = genInputField(root_key, root_val, default_props, rootType, schemaName, jspath);
-                outputHtml += genFormGroup2(innerHtml, getLabel(root_key, jspath));
+                // var innerHtml = genInputField(root_key, root_val, default_props, rootType, schemaName, jspath);
+                // outputHtml += genFormGroup2(innerHtml, getLabel(root_key, jspath));
+                
+                outputHtml += genInputAndFormGroup(root_key, root_val);
             }
             else if(rootType == "array"){
                 var tmpHtml = handleArrayFields(root_key, root_val, root_key, schemaName, jsObj, default_props);
@@ -119,6 +121,16 @@ function processReturnedJson(jsObj){
         var formSerial = $("#"+ cosmoProps.target_form_id).serializeArray();
         outputDebug(cosmoProps, stringIt(formSerial), stringIt(genDataOutput(formSerial)));
     }
+}
+
+function genInputAndFormGroup(key, val){
+    pathout(key, origData);
+    var outputHtml = "";
+
+    var innerHtml = genInputField_2(key, val, key);
+    outputHtml += genFormGroup_3(innerHtml, key);
+
+    return outputHtml;
 }
 
 function submitForm2(formSerialized){
@@ -282,6 +294,76 @@ function genHandleObject2(objVal, parentKey, child_key){
 }
 
 function genInputField(name, value, props, type, schemaName, jspath){
+    // 1 - determine if there is any matching override schema field
+    if(overrideSchema != null || overrideSchema != undefined){
+        var npath = normalizePath(overrideSchema, jspath);
+        var formField = getPathValue2(overrideSchema, npath +".form_field");
+
+        if(formField != false){
+            if(formField == "id"){
+                return genStaticControl2(name, value);
+            }
+
+            if(formField == "radio"){
+                options = getPathValue(overrideSchema, jspath +".options");
+
+                if(options.length > 0){
+                    return genRadios2(name, value, options);
+                }
+                else{
+                    return genBooleanRadio(name, value, true);
+                }
+            }
+
+            if(formField == "select"){
+                options = getPathValue(overrideSchema, jspath +".options");
+
+                if(options.length > 0){
+                    return genSelect(name, value, options);
+                }
+                else{
+                    return genBooleanSelect(name, value);
+                }
+            }
+        }
+        else{
+            // default for boolean types
+            if(type == "boolean"){
+                return genBooleanRadio(name, value, true);
+            }
+
+            if(type == "string"){
+                if(value.length > 30){
+                    // generate textarea
+                    return genTextarea2(name, value);
+                }
+            }
+        }
+
+        // return genTextInput(name, value, props);
+        return genTextInput2(name, value);
+
+    }
+    else{
+        // default for boolean types
+        if(type == "boolean"){
+            return genBooleanRadio(name, value, true);
+        }
+
+        if(type == "string" && value.length > 30){
+            // generate textarea
+            // return genTextarea(name, value, props);
+            return genTextarea2(name, value);
+        }
+
+        // return genTextInput(name, value, props);
+        return genTextInput2(name, value);
+    }
+}
+
+function genInputField_2(name, value, jspath){
+    var type = tp(value);
+
     // 1 - determine if there is any matching override schema field
     if(overrideSchema != null || overrideSchema != undefined){
         var npath = normalizePath(overrideSchema, jspath);
@@ -712,6 +794,26 @@ function genFormGroup2(innerHtml, labelValue){
         html += innerHtml;
     html += "</div>";
 
+    return html;
+}
+
+function genFormGroup_3(innerHtml, keyVal){
+    var ds = getPathValue2(overrideSchema, keyVal + ".display");
+    var ff = getPathValue2(overrideSchema, keyVal + ".form_field");
+
+    if(ff == "id" && ds != undefined){
+        ds = ds ? "block":"none";
+    }
+    else{
+        ds = "block";
+    }
+
+    var html = "<div class='form-group' style='display: "+ ds +"'>";
+        if(keyVal != "" || keyVal != undefined){
+            html += "<label>"+ keyVal +"</label>";
+        }
+        html += innerHtml;
+    html += "</div>";
     return html;
 }
 

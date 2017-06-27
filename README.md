@@ -1,4 +1,4 @@
-# ![cos](cos_bw_sm.jpg?raw=true "") CosmoForms v1.0.0-beta
+# ![cos](cos_bw_sm.jpg?raw=true "") CosmoForms v1.1.0-beta
 
 ### About
 
@@ -303,6 +303,3 @@ Like all things in life, CosmoForms has limitations:
 - Implement client-side validation callbacks
 - Ability to remove/delete lists and objects
 - Ability to rename fields
-
-
-updated

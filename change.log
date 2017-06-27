@@ -1,0 +1,3 @@
+6.26.17
+	- ID fields are now hidden by default
+		- to show, add "display": true | false to override schema
