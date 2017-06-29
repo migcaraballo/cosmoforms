@@ -61,8 +61,8 @@ function processReturnedJson(jsObj){
 
             // if not array OR object, later will handle specific inputs with overrides_schema
             if(rootType != "array" && rootType != "object" ){
-                var jspath = root_key;
-                pathout(root_key, jsObj);
+                // var jspath = root_key;
+                // pathout(root_key, jsObj);
 
                 // var innerHtml = genInputField(root_key, root_val, default_props, rootType, schemaName, jspath);
                 // outputHtml += genFormGroup2(innerHtml, getLabel(root_key, jspath));
@@ -210,7 +210,8 @@ function genHandleObject2(objVal, parentKey, child_key){
             $.each(v, function(sk,sv){
                 var sKey = spId +"."+ sk;
 
-                var to = genInputField(sKey, sv, null, tp(sv), null, sKey);
+                // var to = genInputField(sKey, sv, null, tp(sv), null, sKey);
+                var to = genInputField_2(sKey, sv, sKey);
                 tmpOutHtml += genFormGroup2(to, getLabel(sk, sKey));
             });
 
@@ -702,7 +703,6 @@ function handleArrayFields(root_key, root_val, jspath, schemaName, data, default
 
     if(schemaPathVal == "multi-select"){
         var options = getPathValue(overrideSchema, ntmp +".options");
-
         var tmpHtml = genMultiSelect(root_key, root_val, options);
         tmpHtml = genFormGroup2(tmpHtml, getLabel(root_key, root_key));
         return tmpHtml;
@@ -746,7 +746,8 @@ function handleArrayFields(root_key, root_val, jspath, schemaName, data, default
                 pathout(jspath, origData);
                 setRef(jspath, child_val);
 
-                var out = genInputField(jspath, child_val, default_props, tp(child_val), schemaName);
+                // var out = genInputField(jspath, child_val, default_props, tp(child_val), schemaName);
+                var out = genInputField_2(jspath, child_val, jspath);
 
                 if(out != undefined || out != null){
                     outputHtml += out;
